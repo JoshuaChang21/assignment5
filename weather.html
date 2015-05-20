@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taiwan's Weather</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="mycss.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-xs-6">
+      <!-- Large button group -->
+      <div class="btn-group">
+        
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" id="menu">
+          Taipei <span class="caret"></span>
+        </button>
+        
+        <ul id="dropdown" class="dropdown-menu" role="menu">
+              <li role="presentation" id="Taiepi"><a role="menuitem" tabindex="-1" href="#">Taipei</a></li>
+              <li role="presentation" id="New Taipei"><a role="menuitem" tabindex="-1" href="#">New Taipei</a></li>
+              <li role="presentation" id="Taichung"><a role="menuitem" tabindex="-1" href="#">Taichung</a></li>
+              <li role="presentation" id="Tainan"><a role="menuitem" tabindex="-1" href="#">Tainan</a></li>
+              <li role="presentation" id="Kaohsiung"><a role="menuitem" tabindex="-1" href="#">Kaohsiung</a></li>
+              <li role="presentation" id="Keelung"><a role="menuitem" tabindex="-1" href="#">Keelung</a></li>
+              <li role="presentation" id="Zhongli"><a role="menuitem" tabindex="-1" href="#">Taoyuan</a></li>
+              <li role="presentation" id="Hsinchu City"><a role="menuitem" tabindex="-1" href="#">Hsinchu</a></li>
+              <li role="presentation" id="Hsinchu county"><a role="menuitem" tabindex="-1" href="#">Hsinchu County</a></li>
+              <li role="presentation" id="Miaoli county"><a role="menuitem" tabindex="-1" href="#">Miaoli</a></li>
+              <li role="presentation" id="Changhua county"><a role="menuitem" tabindex="-1" href="#">Changhua</a></li>
+              <li role="presentation" id="Nantou county"><a role="menuitem" tabindex="-1" href="#">Nantou</a></li>
+              <li role="presentation" id="Yunlin county"><a role="menuitem" tabindex="-1" href="#">Yunlin</a></li>
+              <li role="presentation" id="Chiayi city"><a role="menuitem" tabindex="-1" href="#">Chiayi</a></li>
+              <li role="presentation" id="Chiayi county"><a role="menuitem" tabindex="-1" href="#">Chiayi County</a></li>
+              <li role="presentation" id="Pingtung County"><a role="menuitem" tabindex="-1" href="#">Pingtung</a></li>
+              <li role="presentation" id="Yilan county"><a role="menuitem" tabindex="-1" href="#">Yilan</a></li>
+              <li role="presentation" id="Hualien"><a role="menuitem" tabindex="-1" href="#">Hualien</a></li>
+              <li role="presentation" id="Taidong"><a role="menuitem" tabindex="-1" href="#">Taidong</a></li>
+              <li role="presentation" id="Penghu county"><a role="menuitem" tabindex="-1" href="#">Penghu</a></li>
+              <li role="presentation" id="Kinmen County"><a role="menuitem" tabindex="-1" href="#">Kinmen</a></li>
+              <li role="presentation" id="Lianjiang county"><a role="menuitem" tabindex="-1" href="#">Lianjiang</a></li>
+        </ul>
+      </div>
+      
+      <div><span class="temperature"></span> &#8451;</div>
+    </div>
+
+    <div class="col-xs-6">
+      <canvas id="today" width="100" height="100"></canvas>
+      <div class="condition">
+          <span class="date"></span>
+          <span class="cond"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Forecast</div>
+
+            <!-- Table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>5 May 2015</th>
+                  <th>6 May 2015</th>
+                  <th>7 May 2015</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="temp-fore">
+                  <td>17-23 &#8451;</td>
+                  <td>18-26 &#8451;</td>
+                  <td>15-24 &#8451;</td>
+                </tr>
+                <tr>
+                  <td><canvas id="day1" width="64" height="64">Clear</canvas></td>
+                  <td><canvas id="day2" width="64" height="64">Mostly Sunny</canvas></td>
+                  <td><canvas id="day3" width="64" height="64">Mostly Cloudy</canvas></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
+<script src="myapp.js"></script>
+<script src="weath.js"></script>
+</body>
+</html>
